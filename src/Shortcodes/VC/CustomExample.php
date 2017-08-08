@@ -42,6 +42,9 @@ namespace Custom\Plugins\CustomVCPlugins\Shortcodes\VC
 
 			function registerShortCode($atts, $content) {
 				// TODO: Implement registerShortCode() method.
+				ob_start();
+				include( Helpers::getPluginPath() .'/vc_templates/CustomExample/template.php');
+				return ob_get_clean();
 			}
 		}
 }
